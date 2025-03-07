@@ -1,0 +1,110 @@
+<div class="container">
+    <div class="row">
+        <div class="player_title">
+            <div class="play_nav hidden-xs">位置:
+                <a href="/" title="首页">首页</a>
+                <i class="icon iconfont">&#xe65e;</i>
+                <a href="/{mv:type_url}/" title="{mv:type_name}">{mv:type_name}</a>
+                <i class="icon iconfont">&#xe65e;</i>
+                <a title="{mv:vod_name}" target="_self">{mv:vod_name}-剧情简绍</a>
+            </div>
+        </div>
+        <div class="details-nav">
+            <ul>
+                <li >
+                    <a  href="{mv:detail_link}"><span class="hidden-xs">视频</span>详细</a>
+                </li>
+                <li class="active"> <a href="/plots/{mv:vod_id}.html" title="剧情介绍">剧情<span class="hidden-xs">介绍</span></a></li>
+                <li> <a href="/theme/{mv:vod_id}.html" title="主题海报"><span class="hidden-xs">主题</span>海报</a></li>
+                <li> <a href="/trailer/{mv:vod_id}.html" title="上映预告"><span class="hidden-xs">上映</span>预告</a></li>
+            </ul>
+        </div>
+        <div class="layout-box clearfix p-0 mt-0">
+            <div class="col-md-9 col-sm-12 col-xs-12">
+                <div class="col-md-3 col-sm-3 col-xs-4 clearfix">
+                    <div class="details-pic">
+                        <a class="video-pic" href="/" title="{mv:vod_name}" style="background: url({mv:vod_pic}) no-repeat top center;background-size:cover;"></a>
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-8 clearfix p-0">
+                    <div class="details-info p-0" id="story">
+                        <h1 class="text-overflow">
+                            <span>{mv:vod_name} - 全部剧情</span></h1>
+                        <ul class="info clearfix">
+                            <li class="col-md-12 text"><span class="hidden-xs"></span>导演： {mv:vod_director}</li>
+                            <li class="col-md-12 text"><span class="hidden-xs"></span>主演： {mv:vod_actor}</li>
+                            <li class="col-md-12 text"><span class="hidden-xs"></span>地区： {mv:vod_area}</li>
+                            <li class="col-md-12 text"><span class="hidden-xs"></span>语言： {mv:vod_lang}</li>
+                            <li class="col-md-12 text"><span class="hidden-xs"></span>阅读量： {mv:vod_down}次</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9 col-sm-12 box-main-content" style="position:static" id="play">
+            <div class="details-play-title">
+                <div class="layout-box clearfix mt-0">
+                    <div class="text-overflow text-left details-title"><span>(最后更新时间 {mv:vod_time})</span>剧情选择:
+                        <span class="pull-right btn btn-xs btn-success" id="user_detail_add"><i class="icon iconfont text-color"></i>添加剧集</span>
+                    </div>
+                    <div class="playlist">
+                        <ul class="clearfix" style="display: block; height: auto;">
+                            {mv:story_epis}
+                        </ul>
+                    </div>
+                    <div class="details-story">
+                        <div class="item">
+                            <h1 class="text-center">{mv:story_title}</h1>
+                            <div id="popover-info" class="details-content text-justify">
+                                {mv:story_content}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layout-box clearfix">
+                <div class="box-title">
+                    <h3 class="m-0">类似推荐</h3>
+                </div>
+                <div class="item">
+                    <ul class="clearfix" id="content">
+                        {mv:recommend}
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-3 col-sm-12 box-main-side hidden-sm hidden-xs">
+            <div class="layout-box clearfix">
+                <div class="box-title " style="padding:0px 0px 10px 0">
+                    <h3 class="m-0">
+                        <i class="icon iconfont text-color"></i>热门视频</h3></div>
+                <div class="box-video-text-list">
+                    <div class="col-md-6 col-sm-12 col-xs-12 p-0">
+                        {mv:top_first}
+                        <ul class="clearfix mg-0">
+                            {mv:top_list}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-12 box-main-side hidden-sm hidden-xs">
+                <div class="layout-box clearfix">
+                    <div class="box-title " style="padding:0px 0px 10px 0">
+                        <h3 class="m-0">
+                            <i class="icon iconfont text-color"></i>剧情推荐</h3></div>
+                    <div class="box-video-text-list">
+                        <div class="col-md-12 col-sm-12 col-xs-12 p-0">
+                            <ul class="clearfix mg-0">
+                                {mv:rank_story_list}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
